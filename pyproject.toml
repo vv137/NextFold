@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools", "wheel", "cython"]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+name = "NextFold"
+version = "0.1.0"
+requires-python = ">=3.10"
+authors = [{ name = "vv137", email = "vv137.xyz@gmail.com" }]
+description = "Structure prediction of biomolecular interactions"
+readme = "README.md"
+license = { file = "LICENSE" }
+
+
+[project.scripts]
+
+
+[tool.setuptools.package-data]
+nextfold = ["constants.stereo_chemical_props.txt"]
+
+
+[tool.black]
+line-length = 88
+target-version = ["py310"]
+include = "(\\.pyi?|\\.ipynb)$"
+extend-exclude = ""
+
+
+[tool.isort]
+profile = "black"
